@@ -1,0 +1,11 @@
+{
+  "name": "@kawaz/fixed-chunk-stream",
+  "module": "src/index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
