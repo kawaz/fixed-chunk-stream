@@ -38,7 +38,7 @@ export class FixedChunkStream extends TransformStream<Uint8Array, Uint8Array> {
             bufferUsed += bytesToCopy;
             chunkOffset += bytesToCopy;
             if (bufferUsed === buffer.length) {
-              controller.enqueue(buffer);
+              controller.enqueue(buffer.slice());
               bufferUsed = 0;
             }
           }
