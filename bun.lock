@@ -5,6 +5,7 @@
       "name": "@kawaz/fixed-chunk-stream",
       "devDependencies": {
         "@types/bun": "latest",
+        "typescript": "^5.0.0",
       },
       "peerDependencies": {
         "typescript": "^5.0.0",

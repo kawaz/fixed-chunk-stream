@@ -1,9 +1,34 @@
 {
   "name": "@kawaz/fixed-chunk-stream",
-  "module": "src/index.ts",
+  "version": "0.1.0",
+  "description": "Transform streams into fixed-size chunks",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "type": "module",
+  "scripts": {
+    "build": "bun exec 'rm -rf dist'; bun build ./src/index.ts --outdir ./dist --minify --sourcemap=linked; tsc --emitDeclarationOnly --declaration --noEmit false",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "stream",
+    "web-streams",
+    "transform-stream",
+    "chunk",
+    "buffer"
+  ],
+  "author": "Yoshinori Kawasaki",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kawaz/fixed-chunk-stream"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
